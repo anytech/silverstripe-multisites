@@ -19,7 +19,7 @@ class MultisitesFrontController extends ModelAsController {
 	 * Overrides ModelAsController->getNestedController to find the nested controller
 	 * on a per-site basis
 	 **/
-	public function getNestedController() {
+	public function getNestedController(): \SilverStripe\CMS\Controllers\ContentController
 		$request = $this->request;
 		$segment = $request->param('URLSegment');
 		$site    = Multisites::inst()->getCurrentSiteId();
